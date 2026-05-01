@@ -7,7 +7,8 @@ This repository contains iterative analysis, code snippets, and reuse guides for
 - **ChineseChess-AlphaZero**: Evolution history, structure analysis, and core code snippets for AlphaGo Zero architecture in Chinese Chess.
 - **HoK Env**: Deep learning report on Tencent's Honor of Kings AI environment, including multi-modal feature splitting and PPO implementation.
 - **Gymnasium**: Evolution history, structure analysis, and core code snippets for the standard RL environment framework.
-- **Future Projects**: Searchless Chess, etc.
+- **Searchless Chess**: Deep learning report on DeepMind's searchless chess AI, featuring pure Transformer-based decision making without MCTS.
+- **Future Projects**: etc.
 
 ## Goal
 To provide a structured knowledge base for implementing advanced AI architectures in quantitative trading and other domains.
