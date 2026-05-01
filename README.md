@@ -13,6 +13,7 @@ This repository contains iterative analysis, code snippets, and reuse guides for
 - **FinRL**: End-to-end quantitative stock selection framework integrating Gymnasium, SB3, and multi-factor analysis for CPU-based trading.
 - **LightGBM**: Core gradient boosting model for quantitative stock selection, optimized for CPU multi-core processing and seamless FinRL integration.
 - **TA-Lib**: Comprehensive technical indicator library for factor generation, featuring C-level performance and direct LightGBM integration.
+- **Backtrader**: Flexible multi-period backtesting framework supporting custom timeframes and seamless TA-Lib/LightGBM integration.
 - **Future Projects**: etc.
 
 ## Goal
