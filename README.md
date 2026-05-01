@@ -15,6 +15,7 @@ This repository contains iterative analysis, code snippets, and reuse guides for
 - **TA-Lib**: Comprehensive technical indicator library for factor generation, featuring C-level performance and direct LightGBM integration.
 - **Backtrader**: Flexible multi-period backtesting framework supporting custom timeframes and seamless TA-Lib/LightGBM integration.
 - **TFT (Temporal Fusion Transformer)**: Advanced time-series forecasting model integrating Gann theory cycles for high/low point prediction on CPU.
+- **pmdarima**: Automated ARIMA modeling with Gann cycle detection, enabling rapid high/low point forecasting with confidence intervals.
 - **Future Projects**: etc.
 
 ## Goal
