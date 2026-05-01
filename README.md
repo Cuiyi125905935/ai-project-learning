@@ -19,6 +19,7 @@ This repository contains iterative analysis, code snippets, and reuse guides for
 - **HQChart**: Specialized Gann theory toolkit for dynamic angle calibration and time-price resonance mapping on CPU.
 - **technical-analysis**: Advanced Gann percentage retracement and multi-dimensional space-time resonance verification tool.
 - **Stock-Pattern-Analyzer**: Specialized volume cycle analysis and quad-match verification for Gann time-price-volume integration.
+- **Pipeline**: Automated end-to-end scanning pipeline integrating all tools with CPU multi-core optimization and pluggable modules.
 - **Future Projects**: etc.
 
 ## Goal
