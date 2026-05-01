@@ -16,6 +16,7 @@ This repository contains iterative analysis, code snippets, and reuse guides for
 - **Backtrader**: Flexible multi-period backtesting framework supporting custom timeframes and seamless TA-Lib/LightGBM integration.
 - **TFT (Temporal Fusion Transformer)**: Advanced time-series forecasting model integrating Gann theory cycles for high/low point prediction on CPU.
 - **pmdarima**: Automated ARIMA modeling with Gann cycle detection, enabling rapid high/low point forecasting with confidence intervals.
+- **HQChart**: Specialized Gann theory toolkit for dynamic angle calibration and time-price resonance mapping on CPU.
 - **Future Projects**: etc.
 
 ## Goal
