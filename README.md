@@ -18,6 +18,7 @@ This repository contains iterative analysis, code snippets, and reuse guides for
 - **pmdarima**: Automated ARIMA modeling with Gann cycle detection, enabling rapid high/low point forecasting with confidence intervals.
 - **HQChart**: Specialized Gann theory toolkit for dynamic angle calibration and time-price resonance mapping on CPU.
 - **technical-analysis**: Advanced Gann percentage retracement and multi-dimensional space-time resonance verification tool.
+- **Stock-Pattern-Analyzer**: Specialized volume cycle analysis and quad-match verification for Gann time-price-volume integration.
 - **Future Projects**: etc.
 
 ## Goal
