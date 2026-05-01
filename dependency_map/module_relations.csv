@@ -1,0 +1,13 @@
+Source,Target,Input_Type,Output_Type
+pmdarima,HQChart,"Price_Series, Time_Cycle",Gann_Price_Point
+pmdarima,technical-analysis,"High, Low, Time_Cycle, Gann_Price_Point",Resonance_Score
+HQChart,technical-analysis,"High, Low, Time_Cycle, Gann_Price_Point",Resonance_Score
+TA-Lib,Stock-Pattern-Analyzer,"Volume, Time_Cycle, Gann_Price_Point, Resonance_Score",Quad_Match_Score
+pmdarima,Stock-Pattern-Analyzer,"Volume, Time_Cycle, Gann_Price_Point, Resonance_Score",Quad_Match_Score
+HQChart,Stock-Pattern-Analyzer,"Volume, Time_Cycle, Gann_Price_Point, Resonance_Score",Quad_Match_Score
+technical-analysis,Stock-Pattern-Analyzer,"Volume, Time_Cycle, Gann_Price_Point, Resonance_Score",Quad_Match_Score
+TA-Lib,LightGBM,TA-Lib_Features,Selection_Probability
+TA-Lib,FinRL,Market_Data,Multi_Factor_Features
+TA-Lib,Backtrader,K_Line_Data,Period_Environment
+TA-Lib,TFT,"Static_Features, Dynamic_Features",High_Low_Prediction
+pmdarima,TFT,"Static_Features, Dynamic_Features",High_Low_Prediction
