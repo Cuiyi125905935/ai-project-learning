@@ -14,6 +14,7 @@ This repository contains iterative analysis, code snippets, and reuse guides for
 - **LightGBM**: Core gradient boosting model for quantitative stock selection, optimized for CPU multi-core processing and seamless FinRL integration.
 - **TA-Lib**: Comprehensive technical indicator library for factor generation, featuring C-level performance and direct LightGBM integration.
 - **Backtrader**: Flexible multi-period backtesting framework supporting custom timeframes and seamless TA-Lib/LightGBM integration.
+- **TFT (Temporal Fusion Transformer)**: Advanced time-series forecasting model integrating Gann theory cycles for high/low point prediction on CPU.
 - **Future Projects**: etc.
 
 ## Goal
