@@ -1,0 +1,13 @@
+{
+  "memory_version": "1.0",
+  "indexed_modules": [
+    "LightGBM_Model_Configuration",
+    "Backtrader_Strategy_Templates",
+    "HQChart_Indicator_Algorithms",
+    "Stock_Pattern_Analyzer_Volume_Matching",
+    "TA-Lib_Factor_Calculations"
+  ],
+  "knowledge_graph_path": "./agent_memory/knowledge_graph.json",
+  "vector_index_path": "./agent_memory/vector_index.pkl",
+  "last_updated": "2026-05-02T12:19:00Z"
+}

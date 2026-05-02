@@ -1,0 +1,28 @@
+# AI Alchemy Agent Global Requirements & Dependency Governance
+
+## 1. Core Quantitative Stack
+lightgbm>=4.0.0
+pandas>=2.0.0
+numpy>=1.24.0
+ta-lib>=0.4.28
+backtrader>=1.9.78.123
+scikit-learn>=1.2.0
+
+## 2. Machine Learning & Optimization
+optuna>=3.0.0
+pmdarima>=2.0.0
+scipy>=1.10.0
+
+## 3. Data Acquisition
+akshare>=1.10.0
+tushare>=1.2.0
+
+## 4. Code Quality & Governance
+ruff>=0.1.0
+black>=23.0.0
+flake8>=6.0.0
+sonar-scanner>=4.0.0
+
+## 5. Visualization & Analysis
+matplotlib>=3.7.0
+seaborn>=0.12.0
