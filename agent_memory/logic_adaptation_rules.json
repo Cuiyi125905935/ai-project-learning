@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "description": "Rules for adapting historical logic to current market scenarios",
+  "scenario_mappings": [
+    {
+      "source_scenario": "US_Stock_1min",
+      "target_scenario": "A_Share_Daily",
+      "parameter_adjustments": {
+        "find_peaks_distance": {
+          "original": 30,
+          "adjusted": 5,
+          "reason": "Daily data has fewer data points; cycle detection requires shorter distance."
+        },
+        "vol_multiplier": {
+          "original": 3.0,
+          "adjusted": 2.0,
+          "reason": "A-share daily volume is more stable than intraday spikes."
+        }
+      }
+    }
+  ],
+  "data_characteristics": {
+    "A_Share_Daily": {
+      "avg_data_points_per_year": 240,
+      "volatility_profile": "Lower frequency, higher gap risk"
+    },
+    "US_Stock_1min": {
+      "avg_data_points_per_year": 98280,
+      "volatility_profile": "High frequency, mean-reverting noise"
+    }
+  }
+}

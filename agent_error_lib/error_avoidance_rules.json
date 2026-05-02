@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "description": "Automated rules to avoid recurring errors in code generation and execution",
+  "rules": [
+    {
+      "error_type": "IndentationError",
+      "rule": "Use 4 spaces for indentation consistently across all Python files.",
+      "tool_enforcement": "black --line-length 88"
+    },
+    {
+      "error_type": "LineTooLong",
+      "rule": "Maximum line length is 88 characters (aligned with Black).",
+      "tool_enforcement": "flake8 --max-line-length 88"
+    },
+    {
+      "error_type": "UndefinedName",
+      "rule": "All variables must be defined before use; no implicit globals.",
+      "tool_enforcement": "ruff check --select=F821"
+    },
+    {
+      "error_type": "DependencyConflict",
+      "rule": "Always run 'pip check' after installing new packages and resolve conflicts using dependency_fix_rules.json.",
+      "tool_enforcement": "pip check"
+    }
+  ]
+}

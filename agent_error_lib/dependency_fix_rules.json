@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "description": "Automated dependency conflict resolution rules for AI Alchemy Agent",
+  "priority_levels": {
+    "critical": ["numpy", "pandas", "backtrader", "lightgbm"],
+    "high": ["tensorflow", "keras", "h5py", "httpx", "scipy"],
+    "medium": ["chromadb", "fastmcp", "mcp", "tenacity"],
+    "low": ["luigi", "mootdx", "numba"]
+  },
+  "resolution_strategies": [
+    {
+      "conflict_pattern": "version_mismatch",
+      "action": "upgrade_to_latest_compatible",
+      "fallback": "downgrade_to_last_stable"
+    },
+    {
+      "conflict_pattern": "circular_dependency",
+      "action": "isolate_in_virtual_env",
+      "fallback": "manual_resolution_required"
+    }
+  ],
+  "impact_assessment": {
+    "mootdx": "Low - Only affects specific market data interfaces, not core logic.",
+    "numba": "Medium - May impact JIT-compiled technical indicators if used."
+  }
+}
