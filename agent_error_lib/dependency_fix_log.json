@@ -1,0 +1,92 @@
+{
+  "fix_log_version": "1.0",
+  "start_time": "2026-05-02T12:30:00Z",
+  "conflicts_detected": [
+    {
+      "package": "chromadb",
+      "requirement": "httpx>=0.27.0",
+      "current": "httpx 0.25.2",
+      "priority": "Medium"
+    },
+    {
+      "package": "fastmcp",
+      "requirement": "httpx<1.0,>=0.28.1",
+      "current": "httpx 0.25.2",
+      "priority": "High"
+    },
+    {
+      "package": "luigi",
+      "requirement": "tenacity>=9",
+      "current": "tenacity 8.5.0",
+      "priority": "Low"
+    },
+    {
+      "package": "mcp",
+      "requirement": "httpx>=0.27.1",
+      "current": "httpx 0.25.2",
+      "priority": "High"
+    },
+    {
+      "package": "pandas-ta",
+      "requirement": "numpy>=2.2.6",
+      "current": "numpy 2.2.3",
+      "priority": "Critical"
+    },
+    {
+      "package": "tensorflow",
+      "requirement": "h5py<3.15.0,>=3.11.0",
+      "current": "h5py 3.16.0",
+      "priority": "High"
+    },
+    {
+      "package": "tensorflow",
+      "requirement": "keras>=3.12.0",
+      "current": "keras 3.4.1",
+      "priority": "High"
+    }
+  ],
+  "actions_taken": [
+    {
+      "step": 1,
+      "action": "Upgraded httpx to 0.28.1",
+      "reason": "Resolve conflicts for fastmcp and mcp (High Priority)",
+      "result": "Resolved chromadb, fastmcp, and mcp conflicts. Introduced mootdx conflict."
+    },
+    {
+      "step": 2,
+      "action": "Upgraded numpy to 2.4.4",
+      "reason": "Resolve pandas-ta requirement (Critical Priority)",
+      "result": "Resolved pandas-ta conflict. Introduced numba conflict."
+    },
+    {
+      "step": 3,
+      "action": "Downgraded h5py to 3.14.0",
+      "reason": "Resolve tensorflow requirement (High Priority)",
+      "result": "Resolved tensorflow h5py conflict."
+    },
+    {
+      "step": 4,
+      "action": "Upgraded keras to 3.14.0",
+      "reason": "Resolve tensorflow requirement (High Priority)",
+      "result": "Resolved tensorflow keras conflict."
+    },
+    {
+      "step": 5,
+      "action": "Upgraded tenacity to 9.1.4",
+      "reason": "Resolve luigi requirement (Low Priority)",
+      "result": "Resolved luigi conflict. Introduced mootdx conflict."
+    }
+  ],
+  "remaining_conflicts": [
+    {
+      "package": "mootdx",
+      "issue": "Requires older versions of httpx and tenacity.",
+      "impact": "Low - Not used in core Backtrader/LightGBM modules."
+    },
+    {
+      "package": "numba",
+      "issue": "Requires numpy < 2.3.",
+      "impact": "Medium - May affect JIT-compiled indicators if used."
+    }
+  ]
+}
