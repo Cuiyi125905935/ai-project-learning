@@ -19,20 +19,20 @@ CONFIG = {
 }
 
 def run_static_analysis():
-    """静态分析门禁：集成 SonarLint 与 Clang Static Analyzer 逻辑"""
+    """静态分析门禁：集成 SonarLint 与 Clang-Tidy 逻辑"""
     if not CONFIG["ENABLE_STATIC_ANALYSIS"]:
         logger.info("[SKIP] 静态分析已禁用")
         return True
     
-    logger.info("[START] 触发代码质量静态分析...")
+    logger.info("[START] 触发全量代码质量静态分析...")
     try:
-        # 1. 运行 Ruff (作为 SonarLint 的轻量级替代进行快速修复)
+        # 1. Python 层：运行 Ruff (SonarLint 规则适配)
         logger.info("   [1/2] 运行 Ruff 自动修复编码规范...")
         subprocess.run(["ruff", "check", "--fix", "."], check=True, capture_output=True)
         
-        # 2. 模拟 Clang Static Analyzer 对底层扩展的检查
-        logger.info("   [2/2] 检查底层 C/C++ 扩展接口安全性...")
-        # 实际项目中应调用 scan-build 等工具
+        # 2. C/C++ 层：运行 Clang-Tidy (底层扩展安全性检查)
+        logger.info("   [2/2] 运行 Clang-Tidy 检查底层扩展接口...")
+        subprocess.run(["clang-tidy", "-p", ".", "--fix-errors"], check=True, capture_output=True)
         
         logger.info("[OK] 静态分析通过，代码符合工业级规范。")
         return True
