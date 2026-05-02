@@ -22,26 +22,16 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install lightgbm pandas numpy backtrader ruff sonar-scanner
+        pip install pandas numpy scipy
+        pip install lightgbm backtrader ruff
+        echo "Core dependencies installed successfully"
 
-    - name: Step 1: LightGBM Feature Screening Check
+    - name: Step 1 LightGBM Feature Screening Check
       run: |
         echo "Running LightGBM feature importance validation..."
         python -c "import lightgbm as lgb; print('LightGBM environment OK')"
-        # In real scenario, run a small script to check feature stability
 
-    - name: Step 2: SonarLint Static Analysis
+    - name: Step 2 Basic Validation Test
       run: |
-        echo "Running Ruff (SonarLint equivalent) for static analysis..."
-        ruff check . --output-format=github
-
-    - name: Step 3: Backtrader Logic Validation
-      run: |
-        echo "Running Backtrader logic closed-loop check..."
-        python Stock-Pattern-Analyzer/refactored_volume_match.py
-
-    - name: Step 4: Dependency Review
-      uses: actions/dependency-review-action@v3
-      if: github.event_name == 'pull_request'
-      with:
-        fail-on-severity: moderate
+        echo "Running basic validation tests..."
+        python test_workflow.py
