@@ -1,21 +1,18 @@
 {
   "version": "1.0",
   "description": "Rules for adapting historical logic to current market scenarios",
-  "scenario_mappings": [
+  "scenario_dimensions": {
+    "data_frequency": ["1min", "daily", "weekly", "tick"],
+    "market_type": ["A_Share", "US_Stock", "Crypto", "Forex"],
+    "indicator_type": ["Volume", "Price", "Momentum", "Volatility"]
+  },
+  "adaptation_engine": [
     {
-      "source_scenario": "US_Stock_1min",
-      "target_scenario": "A_Share_Daily",
+      "source_scenario": {"frequency": "1min", "market": "US_Stock"},
+      "target_scenario": {"frequency": "daily", "market": "A_Share"},
       "parameter_adjustments": {
-        "find_peaks_distance": {
-          "original": 30,
-          "adjusted": 5,
-          "reason": "Daily data has fewer data points; cycle detection requires shorter distance."
-        },
-        "vol_multiplier": {
-          "original": 3.0,
-          "adjusted": 2.0,
-          "reason": "A-share daily volume is more stable than intraday spikes."
-        }
+        "find_peaks_distance": {"factor": 0.16, "reason": "Daily data has fewer points; adjust for trading days."},
+        "vol_multiplier": {"factor": 0.67, "reason": "Daily volume is more stable than intraday spikes."}
       }
     }
   ],

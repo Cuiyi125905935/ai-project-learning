@@ -1,11 +1,19 @@
 {
   "version": "1.0",
   "description": "Automated dependency conflict resolution rules for AI Alchemy Agent",
+  "core_module_identification": {
+    "auto_scan_patterns": [
+      {"pattern": "requirements.txt", "priority": "high"},
+      {"pattern": "setup.py", "priority": "high"},
+      {"pattern": "pyproject.toml", "priority": "high"},
+      {"pattern": "*.py", "keyword_imports": ["backtrader", "lightgbm", "tensorflow", "sklearn"]}
+    ],
+    "classification_logic": "Scan root directory for dependency manifests. Classify packages based on import frequency and criticality to core business logic."
+  },
   "priority_levels": {
-    "critical": ["numpy", "pandas", "backtrader", "lightgbm"],
-    "high": ["tensorflow", "keras", "h5py", "httpx", "scipy"],
-    "medium": ["chromadb", "fastmcp", "mcp", "tenacity"],
-    "low": ["luigi", "mootdx", "numba"]
+    "critical_business": ["numpy", "pandas", "backtrader", "lightgbm", "scikit-learn", "torch", "tensorflow"],
+    "general_tools": ["httpx", "requests", "pydantic", "fastapi", "ruff", "black"],
+    "optional_plugins": ["luigi", "mootdx", "tqdm", "colorama"]
   },
   "resolution_strategies": [
     {

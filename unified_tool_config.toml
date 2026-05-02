@@ -1,5 +1,5 @@
-# Unified Tool Configuration for AI Alchemy Agent
-# Aligns flake8, black, and ruff to prevent rule conflicts
+# Unified Tool Configuration for AI Alchemy Agent (Global Default)
+# This configuration is automatically applied to all new tasks to ensure consistency.
 
 [tool.black]
 line-length = 88

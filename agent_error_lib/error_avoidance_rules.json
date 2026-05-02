@@ -1,6 +1,7 @@
 {
-  "version": "1.0",
-  "description": "Automated rules to avoid recurring errors in code generation and execution",
+  "version": "2.0",
+  "scope": "Global_Agent_Wide",
+  "description": "Universal error avoidance rules applied across all projects",
   "rules": [
     {
       "error_type": "IndentationError",
