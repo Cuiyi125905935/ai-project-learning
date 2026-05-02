@@ -1,0 +1,39 @@
+{
+  "mcpServers": {
+    "ai-alchemy-governance": {
+      "command": "python",
+      "args": [
+        "-m",
+        "ai_alchemy_mcp_server"
+      ],
+      "env": {
+        "PROJECT_ROOT": ".",
+        "ENABLE_SONARLINT": "true",
+        "ENABLE_CLANG_TIDY": "true"
+      },
+      "rules": {
+        "lightgbm_best_practices": {
+          "description": "Enforce LightGBM CPU optimization and feature selection standards",
+          "checks": [
+            "no_gpu_dependency",
+            "feature_importance_logging",
+            "early_stopping_enabled"
+          ]
+        },
+        "backtrader_logic_validation": {
+          "description": "Validate Backtrader strategy logic and data feed integrity",
+          "checks": [
+            "no_lookahead_bias",
+            "correct_sizing_logic",
+            "commission_handling"
+          ]
+        }
+      },
+      "static_analysis": {
+        "sonarlint_config": "pipeline/sonar-project.properties",
+        "clang_tidy_config": "pipeline/.clang-tidy",
+        "auto_fix": true
+      }
+    }
+  }
+}
