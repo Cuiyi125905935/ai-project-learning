@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ERR_001",
+    "category": "Backtrader_Logic",
+    "scenario": "Strategy execution without notify_order",
+    "error_message": "Order status not tracked, leading to multiple entries.",
+    "fix_solution": "Implement notify_order method to track order.Submitted/Accepted/Completed states.",
+    "related_module": "Stock-Pattern-Analyzer/refactored_volume_match.py"
+  },
+  {
+    "id": "ERR_002",
+    "category": "LightGBM_Training",
+    "scenario": "Feature importance not logged during training",
+    "error_message": "Model trained but feature contribution unknown.",
+    "fix_solution": "Add model.feature_importances_ logging and plot_feature_importance call.",
+    "related_module": "technical_analysis_platform/scripts/train_shadow_ml_v2.py"
+  }
+]

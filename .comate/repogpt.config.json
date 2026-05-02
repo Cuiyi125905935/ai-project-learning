@@ -1,0 +1,18 @@
+{
+  "project_name": "ai-project-learning",
+  "memory_focus": [
+    "LightGBM_Model_Configuration",
+    "Backtrader_Strategy_Templates",
+    "HQChart_Indicator_Algorithms",
+    "Stock_Pattern_Analyzer_Volume_Matching"
+  ],
+  "embedding_config": {
+    "model": "text-embedding-ada-002",
+    "chunk_size": 512,
+    "index_path": ".repo_memory/vector_index.pkl"
+  },
+  "retrieval_rules": {
+    "priority": "verified_logic_first",
+    "fallback": "generate_from_scratch"
+  }
+}
